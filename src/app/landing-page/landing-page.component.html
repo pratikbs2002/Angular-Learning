@@ -1,0 +1,226 @@
+<div class="main-container">
+  <app-navbar></app-navbar>
+  <app-home
+    [Username]="Username"
+    [Email]="Email"
+    (newItemEvent)="addItem($event)"
+  ></app-home>
+  <div
+    style="
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40vh;
+      background-color: #022539;
+      margin-top: 30px;
+      color: white;
+    "
+  >
+    <ul>
+      <li *ngFor="let item of items">{{ item }}</li>
+    </ul>
+  </div>
+
+  <div class="co-container">
+    <div class="co-title">ngFor</div>
+    <div class="divider"></div>
+    <div class="co-content">
+      <ul>
+        <li *ngFor="let hero of heroes">{{ hero }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="co-container">
+    <div class="co-title">Text Interpolation | Template statement</div>
+    <div class="divider"></div>
+    <div class="co-content">
+      <label for="hero-input"
+        >Add Hero Name:
+        <input id="hero-input" #heroInput />
+        {{ heroInput.value }}
+      </label>
+      <button type="button" (click)="addHero(heroInput.value)">Add Hero</button>
+    </div>
+  </div>
+  <div class="co-container">
+    <div class="co-title">binding | ([ ] = "")</div>
+    <div class="divider"></div>
+    <div class="co-content">
+      <div class="image-container">
+        <img alt="item" [src]="codeImageUrl" />
+      </div>
+    </div>
+    <div style="margin-top: 40px" class="co-title">
+      Bind button disabled state
+    </div>
+    <div class="divider"></div>
+    <div class="co-content">
+      <div style="font-size: 30px; margin-top: 40px">
+        Value of isUnchanged: {{ isUnchanged }}
+      </div>
+      <button
+        [style.cursor]="!isUnchanged ? 'pointer' : 'not-allowed'"
+        type="button"
+        (click)="alertButton()"
+        [disabled]="isUnchanged"
+      >
+        Disabled Button
+      </button>
+    </div>
+    <div class="co-title">Attribute binding | Style binding</div>
+    <div class="divider"></div>
+    <div class="co-content">
+      <table>
+        <tbody>
+          <tr>
+            <td [style]="tableStyle" [attr.colspan]="1 + 1">Cell 1</td>
+            <td [style]="tableStyle">Cell 2</td>
+          </tr>
+          <tr>
+            <td [style]="tableStyle">Cell 3</td>
+            <td [style]="tableStyle">Cell 4</td>
+            <td [style]="tableStyle">Cell 5</td>
+          </tr>
+          <tr>
+            <td [style]="tableStyle" [attr.colspan]="2 + 1">Cell 6</td>
+          </tr>
+          <tr>
+            <td [style]="tableStyle">Cell 7</td>
+            <td [style]="tableStyle">Cell 8</td>
+            <td [style]="tableStyle">Cell 9</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="co-container">
+    <div class="co-title">Date Pipe</div>
+    <div class="divider"></div>
+    <div class="co-content">
+      <div style="display: flex; gap: 1px; flex-direction: column">
+        <div [style]="tableStyle" style="padding: 10px">
+          The hero's birthday is {{ birthday }}
+        </div>
+        <div [style]="tableStyle" style="padding: 10px">
+          The hero's birthday is {{ birthday | date }}
+        </div>
+        <div [style]="tableStyle" style="padding: 10px">
+          Short Date: {{ birthday | date : "shortDate" }}
+        </div>
+        <div [style]="tableStyle" style="padding: 10px">
+          Custom Format: {{ birthday | date : "dd/MM/yyyy" }}
+        </div>
+        <div [style]="tableStyle" style="padding: 10px">
+          Current Date: {{ currentDate | date }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="co-container">
+    <div class="co-title">ngForm</div>
+    <div class="divider"></div>
+    <div class="co-content">
+      <form #basicForm="ngForm" (ngSubmit)="getData(basicForm.value)">
+        <div class="form-container">
+          <div class="form-title">User Data</div>
+          <input
+            class="input-tag"
+            type="text"
+            ngModel
+            name="name"
+            placeholder="Enter Your Name"
+          />
+          <input
+            class="input-tag"
+            type="email"
+            ngModel
+            name="email"
+            placeholder="Enter Your Email"
+          />
+          <input
+            class="input-tag"
+            type="text"
+            ngModel
+            name="mobile"
+            placeholder="Enter Your Mobile"
+          />
+          <button type="submit" class="submit-button">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="co-container">
+    <div class="co-title">if-else Condition</div>
+    <div class="divider"></div>
+    <div class="co-content">
+      <div class="checkbox-container">
+        <input class="checkbox-main" type="checkbox" (input)="changeState()" />
+      </div>
+      <div *ngIf="temp; then tempTrue; else tempFalse"></div>
+      <ng-template #tempTrue>
+        <div class="co-title">if</div>
+        <div
+          class="co-title"
+          style="color: #ffffff; text-shadow: 0.5px 0px 0px #022539"
+        >
+          Hello 👋, i am the content of the if Condition
+        </div></ng-template
+      >
+      <ng-template #tempFalse>
+        <div class="co-title">else</div>
+        <div
+          class="co-title"
+          style="color: #022539; text-shadow: 0.5px 0px 0px #000000ce"
+        >
+          Hello 👋, i am the content of the else Condition
+        </div></ng-template
+      >
+    </div>
+  </div>
+  <div class="co-container">
+    <div class="co-title">Switch Condition</div>
+    <div class="divider"></div>
+    <div class="co-content" style="border: 1px solid #000000">
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        "
+      >
+        <div class="radio-container" *ngFor="let option of options">
+          <input
+            type="radio"
+            name="radioGroup"
+            [(ngModel)]="selectedOption"
+            [value]="option"
+            id="{{ option }}"
+          />
+          <label style="margin-top: 30px" for="{{ option }}">{{
+            option
+          }}</label>
+        </div>
+      </div>
+      <div>{{ selectedOption }}</div>
+      <div [ngSwitch]="selectedOption">
+        <div *ngSwitchCase="'Thor'">
+          <div class="image-container2">
+            <img alt="item2" [src]="thorImageUrl" />
+          </div>
+        </div>
+        <div *ngSwitchCase="'IronMan'">
+          <div class="image-container2">
+            <img alt="item3" [src]="ironManImageUrl" />
+          </div>
+        </div>
+        <div *ngSwitchCase="'SpiderMan'">
+          <div class="image-container2">
+            <img alt="item4" [src]="spiderManImageUrl" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
