@@ -190,15 +190,19 @@
           text-align: center;
         "
       >
-        <div class="radio-container" *ngFor="let option of options">
+        <div
+          class="radio-container"
+          id="{{ tempNumber }}"
+          *ngFor="let option of options"
+        >
           <input
             type="radio"
-            name="radioGroup"
+            name="radiogroup+ {{ tempNumber }}"
             [(ngModel)]="selectedOption"
             [value]="option"
-            id="{{ option }}"
+            id="{{ option + tempNumber }}"
           />
-          <label style="margin-top: 30px" for="{{ option }}">{{
+          <label style="margin-top: 30px" for="{{ option + tempNumber }}">{{
             option
           }}</label>
         </div>

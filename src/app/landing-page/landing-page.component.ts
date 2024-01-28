@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from '../home/home.component';
@@ -83,4 +83,9 @@ export class LandingPageComponent {
   //switch condition
   options: string[] = ['Thor', 'IronMan', 'SpiderMan'];
   selectedOption: string = 'Thor';
+  tempNumber: number = Math.random();
+  constructor() {}
+  ngOnChanges() {
+    console.log(this.selectedOption);
+  }
 }

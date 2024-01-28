@@ -5,11 +5,14 @@ a {
   border-radius: 10px;
   width: 100px;
   text-align: center;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.614);
 }
 
 a:hover {
   background-color: rgba(255, 0, 0, 0.614);
   color: white;
+  font-style: normal;
 }
 
 nav {
@@ -17,6 +20,6 @@ nav {
   align-items: center;
   justify-content: center;
   /* flex-direction: column; */
-  padding: 100px;
+  padding: 100px; 
   gap: 10px;
 }
