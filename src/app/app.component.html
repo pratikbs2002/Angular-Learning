@@ -4,7 +4,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
   "
-></div>
+>
+  <nav>
+    <a routerLink="/">Home</a>
+    <a
+      routerLink="/about"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      >About</a
+    >
+    <a routerLink="/contact">Contact</a>
+  </nav>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

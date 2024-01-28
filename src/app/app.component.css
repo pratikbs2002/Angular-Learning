@@ -1,0 +1,22 @@
+a {
+  border: 1px solid rgba(255, 0, 0, 0.411);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100px;
+  text-align: center;
+}
+
+a:hover {
+  background-color: rgba(255, 0, 0, 0.614);
+  color: white;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-direction: column; */
+  padding: 100px;
+  gap: 10px;
+}

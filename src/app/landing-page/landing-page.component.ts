@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from '../home/home.component';
 import { DatePipe } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
-// import
+import { NavigationBarComponent } from '../navigation-bar/navigation-bar.component';
 @Component({
   selector: 'app-landing-page',
   standalone: true,
@@ -14,6 +14,7 @@ import { FormsModule, NgForm } from '@angular/forms';
     CommonModule,
     DatePipe,
     FormsModule,
+    NavigationBarComponent,
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css',
