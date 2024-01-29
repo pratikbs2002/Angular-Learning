@@ -1,1 +1,16 @@
-<p>about works!</p>
+<div class="about-container">
+  <p>About</p>
+  <div class="userData">
+    <div class="title">Current User</div>
+    <div>{{ currentUser.name }}</div>
+    <div>{{ currentUser.email }}</div>
+  </div>
+  <div class="user-list">
+    <ul>
+      <li *ngFor="let user of userList">
+        <div>{{ user.name }}</div>
+        <div>{{ user.email }}</div>
+      </li>
+    </ul>
+  </div>
+</div>

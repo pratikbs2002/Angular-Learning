@@ -20,6 +20,10 @@ nav {
   align-items: center;
   justify-content: center;
   /* flex-direction: column; */
-  padding: 100px; 
+  padding: 100px;
   gap: 10px;
+}
+
+app-home {
+  width: 100%;
 }
