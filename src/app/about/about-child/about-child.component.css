@@ -9,14 +9,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   height: 200px;
-  background-color: hsl(0, 100%, 71%);
+  background-color: #ff6969;
   margin-bottom: 100px;
 }
 
 .title {
-  border-bottom: 1px solid rgb(0, 0, 0);
-  font-size: 30px;
-  font-weight: 800;
+  padding: 20px;
+  background-color: #fff5e0;
+  color: black;
+  border-radius: 10px;
 }

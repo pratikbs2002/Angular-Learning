@@ -7,10 +7,19 @@
   </div>
   <div class="user-list">
     <ul>
-      <li *ngFor="let user of userList">
+      <li
+        *ngFor="let user of userList"
+        [routerLink]="['/user-detail']"
+        [queryParams]="{ name: user.name, email: user.email }"
+      >
         <div>{{ user.name }}</div>
         <div>{{ user.email }}</div>
       </li>
     </ul>
   </div>
+  <div class="button">
+    <a routerLink="./child">Go to child Component</a>
+  </div>
 </div>
+
+<router-outlet></router-outlet>

@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { UserService } from '../service/user.service';
 import { UserListService } from '../service/user-list.service';
 import { CommonModule } from '@angular/common';
+import { RouterLink, RouterOutlet } from '@angular/router';
 interface userType {
   name: string;
   email: string;
@@ -15,7 +16,7 @@ interface user {
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterOutlet, RouterLink],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
   // providers: [UserService],
