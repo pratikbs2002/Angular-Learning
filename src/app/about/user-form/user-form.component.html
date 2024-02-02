@@ -1,0 +1,28 @@
+<div class="parent">
+  <div class="child">
+    <div class="form-container">
+      <form [formGroup]="userForm">
+        <div class="form-inside-container">
+          <input
+            class="input-tag"
+            type="text"
+            placeholder="Name"
+            name="name"
+            formControlName="name"
+          />
+          <input
+            class="input-tag"
+            type="text"
+            placeholder="Email"
+            name="email"
+            formControlName="email"
+          />
+          <button class="submit-button" (click)="submitUserForm()">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <div style="color: white">{{ formValue | json }}</div>
+  </div>
+</div>

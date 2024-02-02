@@ -38,6 +38,11 @@ export class UserListService {
     { id: 25, name: 'Rahul Chahar', email: 'rahulchahar@gmail.com' },
   ];
   getUserList(): User[] {
-    return this.userList;
+    return [...this.userList];
+  }
+
+  addUser(user: User): void {
+    this.userList.push(user);
+    console.log(this.userList);
   }
 }

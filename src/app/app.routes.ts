@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AboutChildComponent } from './about/about-child/about-child.component';
 import { SingleUserComponent } from './about/single-user/single-user.component';
+import { CricketComponent } from './cricket/cricket.component';
 
 export const routes: Routes = [
   {
@@ -23,6 +24,7 @@ export const routes: Routes = [
     ],
   },
   { path: 'contact', component: ContactComponent },
+  { path: 'cricket', component: CricketComponent },
   {
     path: 'user-detail',
     component: SingleUserComponent,

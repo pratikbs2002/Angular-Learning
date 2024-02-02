@@ -1,0 +1,46 @@
+.parent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.child {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #1a120b;
+  margin-bottom: 100px;
+  padding: 40px;
+  padding-top: 100px;
+  border-radius: 10px;
+}
+.title {
+  border-bottom: 1px solid #d5cea3;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #d5cea3;
+}
+
+.card {
+  background-color: #d5cea3;
+  color: #1a120b;
+  padding: 40px;
+  border-radius: 10px;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
