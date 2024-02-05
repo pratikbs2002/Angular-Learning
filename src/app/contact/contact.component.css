@@ -3,6 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  padding-bottom: 100px;
 }
 .child {
   width: 80%;
@@ -12,11 +14,26 @@
   flex-direction: column;
   height: 200px;
   background-color: hsl(0, 100%, 71%);
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
 }
 
 .title {
   border-bottom: 1px solid rgb(0, 0, 0);
   font-size: 30px;
   font-weight: 800;
+}
+
+button {
+  background-color: #f9bd24;
+  padding: 10px 15px 10px 15px;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: -50px;
+  cursor: pointer;
+  width: 300px;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+  }
 }

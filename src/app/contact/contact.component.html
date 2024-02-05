@@ -3,4 +3,34 @@
     <div class="title">Contact</div>
     <h1>{{ message }}</h1>
   </div>
+
+  <div
+    style="
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-direction: column;
+    "
+  >
+    <button (click)="check_of_observable()">check_of_observable</button>
+    <button (click)="check_from_observable()">check_from_observable</button>
+    <button (click)="check_interval_observable()">
+      check_interval_observable
+    </button>
+    <button (click)="check_ajax_observable()">check_ajax_observable</button>
+    <button (click)="check_map_observable()">check_map_observable</button>
+    <button (click)="check_filter_observable()">check_filter_observable</button>
+    <button (click)="check_scan_observable()">check_scan_observable</button>
+    <button (click)="check_mergeMap_observable()">
+      check_mergeMap_observable
+    </button>
+    <button (click)="check_distinctUntilChanged_observable()">
+      check_distinctUntilChanged_observable
+    </button>
+    <button (click)="check_take_observable()">check_take_observable</button>
+    <button (click)="check_mathematical()">
+      Mathematical and Aggregate Operators
+    </button>
+  </div>
 </div>

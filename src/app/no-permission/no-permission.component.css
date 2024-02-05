@@ -1,0 +1,27 @@
+.parent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #27374d;
+  padding-top: 100px;
+}
+.child {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #526d82;
+  margin-bottom: 100px;
+  padding: 40px;
+  padding-top: 100px;
+  border-radius: 10px;
+}
+.title {
+  border-bottom: 1px solid #dde6ed;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #dde6ed;
+}
